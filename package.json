@@ -1,0 +1,29 @@
+{
+  "name": "node-yaml-vault",
+  "version": "0.0.2",
+  "description": "Encrypts and decrypts yaml files",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plyo/node-yaml-vault.git"
+  },
+  "keywords": [
+    "node",
+    "yaml",
+    "vault",
+    "encrypt",
+    "decrypt"
+  ],
+  "bin": {
+    "node-yaml-vault": "./bin/index.js"
+  },
+  "author": "Andrew Balakirev <balakirev.andrey@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plyo/node-yaml-vault/issues"
+  },
+  "homepage": "https://github.com/plyo/node-yaml-vault#readme",
+  "dependencies": {
+    "js-yaml": "^3.6.1"
+  }
+}
