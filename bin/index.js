@@ -61,15 +61,6 @@ function decrypt(text, pass) {
 }
 
 function walk(obj, pattern, transformFn, path) {
-  if (obj && typeof obj === 'object') {
-    return Object.keys(obj).reduce((newObj, key) => {
-      path.push(key);
-      newObj[key] = walk(obj[key], pattern, transformFn, path);
-      path.pop();
-      return newObj;
-    }, {});
-  }
-
   if (Array.isArray(obj)) {
     return obj.map((value, i) => {
       path.push(i);
@@ -77,6 +68,15 @@ function walk(obj, pattern, transformFn, path) {
       path.pop();
       return result;
     });
+  }
+
+  if (obj && typeof obj === 'object') {
+    return Object.keys(obj).reduce((newObj, key) => {
+      path.push(key);
+      newObj[key] = walk(obj[key], pattern, transformFn, path);
+      path.pop();
+      return newObj;
+    }, {});
   }
 
   if (typeof obj !== 'string' || !pattern.test(path.join('.'))) {
