@@ -1,6 +1,6 @@
 {
   "name": "node-yaml-vault",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Encrypts and decrypts yaml files",
   "main": "src/index.js",
   "repository": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/plyo/node-yaml-vault#readme",
   "dependencies": {
-    "js-yaml": "^3.6.1"
+    "js-yaml": "^3.6.1",
+    "yargs": "^6.5.0"
   }
 }
