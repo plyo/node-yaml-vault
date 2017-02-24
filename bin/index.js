@@ -56,7 +56,7 @@ function encrypt(text, pass) {
 }
 
 function decrypt(text, pass) {
-  var decipher = crypto.createDecipher(algorithm, pass);
+  const decipher = crypto.createDecipher(algorithm, pass);
   return decipher.update(text, 'hex', 'utf8') + decipher.final('utf8');
 }
 
